@@ -1,19 +1,17 @@
-var output = {
+const output = {
   rewards: []
 };
 
-if (ikContex.account.isDraft == true) {
-  var sku = "Cover01"
-  var itemPresent = ikContext.account.transactionLines.find(function (line) {
-    return line.itemSku === sku;
-  });
+if (ikContext && ikContext.account && ikContext.account.isDraft === true) {
+  const sku = "Cover01";
+  const itemPresent = ikContext.account.transactionLines.find(line => line.itemSku === sku);
 
   if (!itemPresent) {
     output.rewards.push({
       type: "ADD",
       sku: sku
-    })
+    });
   }
 }
 
-JSON.stringify(output)
+JSON.stringify(output);
