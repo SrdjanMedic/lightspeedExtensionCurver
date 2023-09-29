@@ -3,7 +3,7 @@ var output = {
 };
 
 if (ikContex.account.isDraft == true) {
-  var sku = "CFD1";
+  var sku = "Cover01";
   var itemPresent = ikContext.account.transactionLines.find(function (line) {
     return line.itemSku === sku;
   });
