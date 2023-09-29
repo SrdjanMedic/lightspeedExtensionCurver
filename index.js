@@ -1,5 +1,5 @@
 var output = {
-  rewards: [],
+  rewards: []
 };
 
 if (ikContex.account.isDraft == true) {
